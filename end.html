@@ -6,28 +6,30 @@
   <title>Quizzard - End</title>
   <link rel="stylesheet" href="app.css">
 </head>
-<body>
-  <div class="container">
-    <div id="end" class="flex-centre flex-column">
-      <h1 id="finalScore">0</h1>
-      <form>
-        <input 
-          type="text"
-          name="username"
-          id="username"
-          placeholder="username"
-          />
-        <button 
-          type="submit"
-          class="btn"
-          id="saveScoreBtn"
-          onclick="saveHighScore(e)"
-        >Save</button>
-        </form>
-        <a class="btn" href="/game.html">Play Again!</a>
-        <a class="btn" href="/index.html">Go Home!</a>
+  <body>
+    <div class="container">
+      <div id="end" class="flex-centre flex-column">
+        <h1 id="finalScore">0</h1>
+        <form>
+          <input 
+            type="text"
+            name="username"
+            id="username"
+            placeholder="username"
+            />
+            <button 
+              type="submit"
+              class="btn"
+              id="saveScoreBtn"
+              onclick="saveHighScore(e)"
+            >
+              Save
+            </button>
+          </form>
+          <a class="btn" href="/game.html">Play Again!</a>
+          <a class="btn" href="/">Go Home!</a>
+      </div>
     </div>
-  </div>
-</body>
-<script src="/end.js"></script>
+    <script src="end.js"></script>
+  </body>
 </html>

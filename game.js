@@ -24,7 +24,15 @@ let questions = [
     choice2: "2",
     choice3: "42",
     choice4: "69",
-    answer: 3
+    answer: 4
+  },
+  {
+    question: "The answer to poop is:",
+    choice1: "88",
+    choice2: "2",
+    choice3: "42",
+    choice4: "69",
+    answer: 1
   }
 ];
 
@@ -44,6 +52,8 @@ getNewQuestion = () => {
   }
 
   questionCounter++;
+  questionCounterText.innerText = `${questionCounter} / ${maxQuestions}`;
+
   const questionIndex = Math.floor(Math.random() * availableQuestions.length);
   currentQuestion = availableQuestions[questionIndex];
   question.innerText = currentQuestion.question;
@@ -69,6 +79,10 @@ choices.forEach(choice => {
     const classToApply =
       selecterAnswer == currentQuestion.answer ? "correct" : "incorrect";
 
+    if (classToApply === "correct") {
+      incrementScore(correctBonus);
+    }
+
     selectedChoice.parentElement.classList.add(classToApply);
 
     setTimeout(() => {
@@ -77,5 +91,10 @@ choices.forEach(choice => {
     }, 1000);
   });
 });
+
+incrementScore = num => {
+  score += num;
+  scoreText.innerText = score;
+};
 
 startGame();

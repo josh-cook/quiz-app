@@ -1,5 +1,5 @@
 const question = document.getElementById("question");
-const choices = Array.from(document.getElementsByClassName("choice-text"));
+const choices = Array.from(document.getElementsByClassName("choice-container"));
 const progressText = document.getElementById("progressText");
 const progressBarFull = document.getElementById("progressBarFull");
 const scoreText = document.getElementById("score");
@@ -73,7 +73,8 @@ getNewQuestion = () => {
 
   choices.forEach(choice => {
     const number = choice.dataset["number"];
-    choice.innerText = currentQuestion["choice" + number];
+    choice.getElementsByClassName("choice-text")[0].innerText =
+      currentQuestion["choice" + number];
   });
 
   availableQuestions.splice(questionIndex, 1);
@@ -82,11 +83,11 @@ getNewQuestion = () => {
 };
 
 choices.forEach(choice => {
-  choice.addEventListener("click", e => {
+  choice.addEventListener("click", () => {
     if (!acceptingAnswers) return;
 
     acceptingAnswers = false;
-    const selectedChoice = e.target;
+    const selectedChoice = choice;
     const selecterAnswer = selectedChoice.dataset["number"];
 
     const classToApply =
@@ -96,10 +97,10 @@ choices.forEach(choice => {
       incrementScore(correctBonus);
     }
 
-    selectedChoice.parentElement.classList.add(classToApply);
+    selectedChoice.classList.add(classToApply);
 
     setTimeout(() => {
-      selectedChoice.parentElement.classList.remove(classToApply);
+      selectedChoice.classList.remove(classToApply);
       getNewQuestion();
     }, 1000);
   });

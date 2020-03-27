@@ -37,8 +37,8 @@ fetch("https://opentdb.com/api.php?amount=10&type=multiple")
 
       return formattedQuestion;
     });
-    game.classList.remove("hidden");
-    loader.classList.add("hidden");
+
+    setTimeout(() => {}, 1000);
     startGame();
   })
   .catch(error => {
@@ -53,6 +53,8 @@ startGame = () => {
   score = 0;
   availableQuestions = [...questions];
   getNewQuestion();
+  game.classList.remove("hidden");
+  loader.classList.add("hidden");
 };
 
 getNewQuestion = () => {

@@ -58,7 +58,7 @@
   width: 0%;
 }
 
-.loader {
+#loader {
   border: 1.5rem solid transparent;
   border-radius: 50%;
   border-top: 1.5rem solid #56a5eb;

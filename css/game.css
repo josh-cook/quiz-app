@@ -59,9 +59,9 @@
 }
 
 #loader {
-  border: 1.5rem solid transparent;
+  border: 1.5rem solid rgba(255, 255, 255, 0.3);
   border-radius: 50%;
-  border-top: 1.5rem solid #56a5eb;
+  border-top: 1.5rem solid #E01A4F;
   width: 12rem;
   height: 12rem;
   animation: spin 1.5s linear infinite;

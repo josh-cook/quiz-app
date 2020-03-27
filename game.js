@@ -9,7 +9,6 @@ let acceptingAnswers = false;
 let score = 0;
 let questionCounter = 0;
 let availableQuestions = [];
-
 let questions = [];
 
 fetch("questions.json")
@@ -19,6 +18,9 @@ fetch("questions.json")
   .then(loadedQuestions => {
     questions = loadedQuestions;
     startGame();
+  })
+  .catch(error => {
+    console.error(error);
   });
 
 const correctBonus = 10;

@@ -12,6 +12,15 @@ let availableQuestions = [];
 
 let questions = [];
 
+fetch("questions.json")
+  .then(response => {
+    return response.json();
+  })
+  .then(loadedQuestions => {
+    questions = loadedQuestions;
+    startGame();
+  });
+
 const correctBonus = 10;
 const maxQuestions = 3;
 
@@ -74,5 +83,3 @@ incrementScore = num => {
   score += num;
   scoreText.innerText = score;
 };
-
-startGame();

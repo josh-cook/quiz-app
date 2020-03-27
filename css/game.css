@@ -2,21 +2,21 @@
   display: flex;
   margin-bottom: 0.5rem;
   width: 100%;
-  font-size: 1.8rem;
-  border: 0.1rem solid rgba(86, 165, 235, 0.25);
+  font-size: 2.5rem;
+  border: 0.1rem solid rgba(224, 26, 79);
   background-color: white;
 }
 
 .choice-container:hover {
   cursor: pointer;
-  box-shadow: 0 0.4rem 1.4rem 0 rgba(86, 185, 235, 0.5);
+  box-shadow: 0 0.4rem 1.4rem 0 rgba(224, 26, 79, 0.4);
   transform: translateY(-0.1rem);
   transition: transform 150ms;
 }
 
 .choice-prefix {
   padding: 1.5rem 2.5rem;
-  background-color: #56a5eb;
+  background-color: #E01A4F;
   color: white;
 }
 
@@ -25,11 +25,11 @@
 }
 
 .correct {
-  background-color: #28a745;
+  background-color: #30FF89;
 }
 
 .incorrect {
-  background-color: #dc3545;
+  background-color: #ED1A3D;
 }
 
 #hud {
@@ -39,7 +39,7 @@
 
 .hud-prefix {
   text-align: center;
-  font-size: 2rem;
+  font-size: 3rem;
 }
 
 .hud-main-text {
@@ -49,12 +49,12 @@
 #progressBar {
   width: 20rem;
   height: 4rem;
-  border: 0.3rem solid #56a5eb;
+  border: 0.3rem solid #E01A4F;
 }
 
 #progressBarFull {
   height: 3.4rem;
-  background-color: #56a5eb;
+  background-color: #E01A4F;
   width: 0%;
 }
 

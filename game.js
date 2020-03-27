@@ -10,32 +10,7 @@ let score = 0;
 let questionCounter = 0;
 let availableQuestions = [];
 
-let questions = [
-  {
-    question: "The answer to life is:",
-    choice1: "1",
-    choice2: "2",
-    choice3: "42",
-    choice4: "69",
-    answer: 3
-  },
-  {
-    question: "The answer to death is:",
-    choice1: "1",
-    choice2: "2",
-    choice3: "42",
-    choice4: "69",
-    answer: 4
-  },
-  {
-    question: "The answer to poop is:",
-    choice1: "88",
-    choice2: "2",
-    choice3: "42",
-    choice4: "69",
-    answer: 1
-  }
-];
+let questions = [];
 
 const correctBonus = 10;
 const maxQuestions = 3;
